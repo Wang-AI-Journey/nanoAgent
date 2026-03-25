@@ -100,7 +100,7 @@ if __name__ == "__main__":
     # messages 在整个会话中保持，上下文跨轮次保留
     messages = [{"role": "system", "content": "You are a helpful assistant. Be concise."}]
 
-    print("多轮对话模式，输入 exit 退出\n")
+    print("多轮对话模式，输入 exit 退出，输入 clear 清空上下文\n")
     while True:
         user_input = input("你: ").strip()
         if user_input.lower() == "exit":

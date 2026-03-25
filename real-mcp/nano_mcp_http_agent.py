@@ -8,6 +8,9 @@ nano_mcp_http_agent.py - 第一篇的 run_agent 接入 MCP Server
 """
 import os, sys, json, requests
 from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SERVER_URL = os.environ.get("MCP_SERVER_URL", "http://127.0.0.1:8766/mcp")
 CLIENT = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"), base_url=os.environ.get("OPENAI_BASE_URL"))
